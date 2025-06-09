@@ -1,8 +1,8 @@
 # Prueba de desempeño - Módulo 2
 
-**Proyecto: Portafolio personal**
+**Project: Personal Portfolio**
 
-El principal motivo de la creación de este repositorio es para exponer mis destrezas, habilidades y mi perfil con la posibilidad para contactarme con el propósito de crear conexiones en el mundo de la programación.
+The main objective about creating this repository is to expose my profile and skills with the posibility to contactme with the purpose of getting bonds in the programming word.
 
 **Coder:** Andrés Felipe Londoño
 **Clan:** Gosling
