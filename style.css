@@ -1,5 +1,18 @@
 html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: var(--backgrouds);
 }
 
 * {
@@ -20,11 +33,40 @@ html {
     --highlight: #66FF66;
     --alert: #FF3B30;
     --correct: #00CC66;
+    --fuente: "Playwrite DE Grund", cursive;
 }
 
-/* -- FONTS -- */
-a {
+/* -- CONFIG DE FUENTES -- */
+h1 {
+    font-family: var(--fuente);
+    font-size: 4rem;
     color: var(--t1);
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-family: var(--fuente);
+    font-size: 3.2rem;
+    color: var(--t1);
+    font-weight: bold;
+    margin: 0;
+}
+
+h3 {
+    font-family: var(--fuente);
+    font-size: 2rem;
+    color: var(--t1);
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    font-family: var(--fuente);
+    color: var(--t1);
+    font-size: 1.8rem;
     font-weight: bold;
     text-decoration: none;
 }
@@ -34,33 +76,24 @@ a:hover {
     text-shadow: var(--shadows);
 }
 
-h1 {
-    color: var(--t1);
-    font-weight: bold;
-}
-
-h2 {
-    color: var(--t2);
-    margin: 0 0 2vh 0;
-
-}
-
 p {
+    font-family: var(--fuente);
+    font-size: 1.6rem;
     color: var(--parrafos);
     margin: 0;
 }
 
-body {
-    margin: 0;
-    background-color: var(--backgrouds);
-}
-
-#nav_bar {
+section,
+main {
+    width: 85%;
+    margin: 8rem auto;
     background-color: var(--secondary-backs);
-    padding: 4vh 4vw;
+    border-radius: 30px;
+    box-shadow: var(--shadow1);
 }
 
-#nav_bar ul {
+/* -- BARRA DE NAVEGACION -- */
+.nav_lis{
     list-style: none;
     padding: 0;
     margin: 0;
@@ -69,8 +102,9 @@ body {
     grid-template-rows: auto;
 }
 
-.nav {
-    display: grid;
+#nav_bar {
+    background-color: var(--secondary-backs);
+    padding: 4vh 4vw;
 }
 
 .nav.i {
@@ -85,13 +119,6 @@ body {
     grid-column: 5/7;
 }
 
-section,main{
-    margin: 6vh 4vw;
-    background-color: var(--secondary-backs);
-    border-radius: 30px;
-    box-shadow: var(--shadow1);
-}
-
 /* - - ABOUT ME - - */
 #aboutme_section {
     display: grid;
@@ -100,11 +127,11 @@ section,main{
 }
 
 .aboutme.i {
+    width: 100%;
     text-align: center;
     grid-column: 1/6;
     grid-row: 1/span 2;
-    display: grid;
-
+    align-self: center;
 }
 
 .hero_img {
@@ -119,50 +146,57 @@ section,main{
 .hero_img:hover {
     transition-property: opacity;
     transition-duration: 3s;
-
     opacity: 100%;
 }
 
 .aboutme.ii {
+    width: 90%;
+    margin: auto;
     grid-column: 6/13;
-    align-self: center;
 }
+
 
 .skills {
-    width: 80%;
-}
-
-.aboutme.iii {
+    width: 90%;
+    margin: auto;
     grid-column: 6/span 3;
     grid-row: 2;
     text-align: center;
     align-self: center;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
 }
 
-.aboutme.iii>h2,
-.aboutme.iv>h2 {
-    grid-column: 1/4;
-    grid-row: 1;
-}
-
-.skills.i,
-.skills.iii {
-    grid-row: 2/span 6;
-}
-
-.skills.ii {
-    grid-column: 2;
-    grid-row: 4/span 7;
-}
-
-.aboutme.iv {
+.tools {
+    width: 90%;
+    margin: auto;
     grid-column: 10/span 3;
     grid-row: 2;
     text-align: center;
     align-self: center;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw
+}
 
+.skills h3, .tools h3{
+    grid-column: 1/4;
+    grid-row: 1;
+}
+
+.skill{
+    width: 100%;
+}
+
+.skill.i,
+.skill.iii {
+    grid-row: 2/span 6;
+}
+
+.skill.ii {
+    grid-column: 2;
+    grid-row: 4/span 10;
 }
 
 @keyframes acelerate {
@@ -179,9 +213,9 @@ section,main{
     }
 }
 
-.skills.i:hover,
-.skills.ii:hover,
-.skills.iii:hover {
+.skill.i:hover,
+.skill.ii:hover,
+.skill.iii:hover {
     animation: acelerate 2s forwards;
 }
 
@@ -274,6 +308,7 @@ footer {
         grid-column: 1/13;
         grid-row: 1;
         display: grid;
+        
     }
 
     .aboutme.ii {
@@ -285,11 +320,11 @@ footer {
         padding-block: 1vh;
     }
 
-    .skills {
+    .skill {
         width: 80%;
     }
 
-    .aboutme.iii {
+    .skills{
         grid-column: 9/span 4;
         grid-row: 2;
         text-align: center;
@@ -297,7 +332,7 @@ footer {
         display: grid;
     }
 
-    .aboutme.iv {
+    .tools {
         grid-column: 9/span 4;
         grid-row: 3;
         text-align: center;
@@ -374,7 +409,7 @@ footer {
         padding-inline: 2vw;
     }
 
-    .aboutme.iii {
+    .skills {
         grid-column: 1;
         grid-row: 3;
         display: grid;
@@ -384,7 +419,7 @@ footer {
 
     }
 
-    .aboutme.iv {
+    .tools {
         grid-column: 1;
         grid-row: 5;
         text-align: center;
@@ -394,7 +429,7 @@ footer {
         width: 80%;
     }
 
-    .skills {
+    .skill {
         width: 60%;
     }
 
