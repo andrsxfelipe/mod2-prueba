@@ -1,14 +1,15 @@
 # Prueba de desempeño - Módulo 2
 
-*Proyecto: Portafolio personal*
+**Proyecto: Portafolio personal**
+
 El principal motivo de la creación de este repositorio es para exponer mis destrezas, habilidades y mi perfil con la posibilidad para contactarme con el propósito de crear conexiones en el mundo de la programación.
 
-*Coder:* Andrés Felipe Londoño
-*Clan:* Gosling
-*Correo:* afelipelondono81@gmail.com
-*ID:* 1000291777
+**Coder:** Andrés Felipe Londoño
+**Clan:** Gosling
+**Correo:** afelipelondono81@gmail.com
+**ID:** 1000291777
 
-*Maquetado*
+**Maquetado**
 ```
 └── 📁mod2_prueba
     └── 📁assets
