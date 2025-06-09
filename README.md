@@ -29,4 +29,4 @@ El principal motivo de la creación de este repositorio es para exponer mis dest
     └── README.md
     └── style.css
 ```
-
+**link:** https://andrsxfelipe.github.io/mod2-prueba/
